@@ -40,6 +40,8 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -83,29 +85,39 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: This process adds queue items to queues." DisplayName="2_AddItems" sap:VirtualizedContainerService.HintSize="450,782" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: This process adds queue items to queues." DisplayName="2_AddItems" sap:VirtualizedContainerService.HintSize="634,701" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Add Child Items to Child Performer Queue" DisplayName="Child Queue Items - Bulk Add Queue Items" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[in_dtStockDataChildItems]" QueueName="[in_Config(&quot;OrchestratorQueueName_02_01&quot;).ToString()]">
+    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Add Child Items to Child Performer Queue" DisplayName="Child Queue Items - Bulk Add Queue Items" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[in_dtStockDataChildItems]" QueueName="[in_Config(&quot;OrchestratorQueueName_02_01&quot;).ToString()]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BulkAddQueueItems>
-    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Parent Queue Item - Add Queue Item" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;OrchestratorQueueName_02&quot;).ToString()]" Reference="[in_TransactionItem.Reference]">
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Parent Queue Item - Add Queue Item" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;OrchestratorQueueName_02&quot;).ToString()]" Reference="[in_TransactionItem.Reference]">
       <ui:AddQueueItem.ItemInformation>
         <InArgument x:TypeArguments="x:String" x:Key="FilePath">[in_TransactionItem.SpecificContent("FilePath").ToString()]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="FileName">[in_TransactionItem.SpecificContent("FileName").ToString()]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="TimeStamp">[in_TransactionItem.SpecificContent("TimeStamp").ToString()]</InArgument>
       </ui:AddQueueItem.ItemInformation>
     </ui:AddQueueItem>
-    <ui:LogMessage DisplayName="Queue Items Added - Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[String.Format(&quot;{0} child items added to {1} queue for parent transaction {2}&quot;, &#xA;&#x9;in_dtStockDataChildItems.Rows.Count, &#xA;&#x9;in_Config(&quot;OrchestratorQueueName_02_01&quot;).ToString(),&#xA;&#x9;in_TransactionItem.Reference)]" />
+    <ui:LogMessage DisplayName="Queue Items Added - Log Message" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[String.Format(&quot;{0} child items added to {1} queue for parent transaction {2}&quot;, &#xA;&#x9;in_dtStockDataChildItems.Rows.Count, &#xA;&#x9;in_Config(&quot;OrchestratorQueueName_02_01&quot;).ToString(),&#xA;&#x9;in_TransactionItem.Reference)]" />
   </Sequence>
 </Activity>
