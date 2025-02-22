@@ -100,7 +100,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message (Initialize All Settings)" sap:VirtualizedContainerService.HintSize="516,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Initializing settings...&quot;]" />
-    <Assign DisplayName="Assing out_Config (initialization) s" sap:VirtualizedContainerService.HintSize="516,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assing out_Config (initialization) ss" sap:VirtualizedContainerService.HintSize="516,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_Config]</OutArgument>
       </Assign.To>
