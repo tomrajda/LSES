@@ -40,11 +40,16 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": [
-        "Tests/MainTestCase.xaml"
-      ]
+      "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9d2a02d5-057d-4e9c-9110-4ef1eddbe8a8",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\MainTestCase.xaml"
+      }
+    ],
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
