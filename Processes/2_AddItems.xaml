@@ -97,14 +97,14 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: This process adds queue items to queues." DisplayName="2_AddItems" sap:VirtualizedContainerService.HintSize="634,701" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: This process adds queue items to queues." DisplayName="2_AddItems" sap:VirtualizedContainerService.HintSize="662,878.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Add Child Items to Child Performer Queue" DisplayName="Child Queue Items - Bulk Add Queue Items" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[in_dtStockDataChildItems]" QueueName="[in_Config(&quot;OrchestratorQueueName_02_01&quot;).ToString()]">
+    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Add Child Items to Child Performer Queue" DisplayName="Child Queue Items - Bulk Add Queue Items" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_2" QueueItemsDataTable="[in_dtStockDataChildItems]" QueueName="[in_Config(&quot;OrchestratorQueueName_02_01&quot;).ToString()]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
